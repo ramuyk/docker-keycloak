@@ -12,7 +12,7 @@ This repository includes:
 
     This setup ensures that your Keycloak configurations and data are preserved when the container is restarted.
 
-- **Dockerfile**: Specifies the custom `Keycloak` Docker image build process. This file includes the necessary environment configurations for a production setup. 
+- **Dockerfile**: Specifies the custom `Keycloak` Docker image build process, currently using Keycloak version 24.0.4. If you need to use a different version, modify the Dockerfile accordingly.
 
 ## Getting Started
 
@@ -44,8 +44,11 @@ Before starting the quick setup, please note the following adjustments:
 2. **Build and Start Keycloak**:
    Use the following command to build the Keycloak image and start the service:
    ```bash
-   docker-compose up -d --build
+   docker compose up -d --build
    ```
 
 3. **Access Keycloak**:
    Open a web browser and navigate to `https://yourdomain.com` (or the domain you configured in the `.env` file) to access the Keycloak web interface. Use the credentials you defined in the `.env` file.
+
+
+
