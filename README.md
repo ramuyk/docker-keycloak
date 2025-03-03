@@ -32,7 +32,7 @@ Before starting the quick setup, please note the following adjustments:
 
 3. **Domain and Reverse Proxy**: This setup requires setting `KC_HOSTNAME` with a valid domain that points to the server. Additionally, a reverse proxy is necessary to handle HTTPS and forward traffic to the Keycloak service properly. Ensure your reverse proxy is correctly configured to point to the Keycloak service running on your server.
 
-### Quick Setup
+### Quick Setup (PRD)
 
 1. **Clone the Repository**:
    Clone this repository to your local machine using the following Git command:
@@ -51,4 +51,13 @@ Before starting the quick setup, please note the following adjustments:
    Open a web browser and navigate to `https://yourdomain.com` (or the domain you configured in the `.env` file) to access the Keycloak web interface. Use the credentials you defined in the `.env` file.
 
 
+### Quick Setup (DEV)
 
+1. **Start Keycloak**:
+   Use the following command to start the Keycloak image:
+   ```bash
+   docker compose -f docker-compose-dev.yml up -d
+   ```
+
+2. **Access Keycloak**:
+   Open a web browser and navigate to `http://localhost:8080` to access the development Keycloak web interface.
